@@ -2,7 +2,7 @@ var assert = require("assert");
 var ports = require("./index.js");
 var fs = require("fs");
 
-ports.ports_file = "/tmp/ports-test.json";
+ports.ports_file = tmp() + "/ports-test.json";
 ports.base_port = 6000;
 
 var tests = {}
@@ -84,4 +84,11 @@ function run_test(name) {
 
 function read_json(filename) {
   return JSON.parse(fs.readFileSync(filename));
+}
+
+function tmp() {
+  if(process.platform == "win32") {
+    return process.env["TMP"];
+  }
+  return process.env["TMPDIR"];
 }

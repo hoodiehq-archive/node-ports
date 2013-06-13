@@ -8,8 +8,9 @@
 // a port is actually available. That’s TBD.
 
 var fs = require("fs");
+var path = require("path");
 
-module.exports.ports_file = process.env.HOME + "/.ports.json";
+module.exports.ports_file = getPortsFile();
 module.exports.base_port = 6000;
 
 module.exports.getPort = function getPort(name, data) {
@@ -52,3 +53,13 @@ var write_json = function write_json(filename, value) {
   fs.writeFileSync(filename + ".tmp", JSON.stringify(value));
   fs.renameSync(filename + ".tmp", filename);
 };
+
+function getPortsFile() {
+  var homedir = "HOME";
+  if(process.platform === "win32") {
+    homedir = "USERPROFILE";
+  }
+  return path.join(process.env[homedir],".ports.json");
+};
+
+module.exports._getPortsFile = getPortsFile;
