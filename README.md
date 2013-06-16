@@ -10,7 +10,7 @@ Note that this module currently doesn’t check whether
 a port is actually available. That’s TBD.
 
 
-## I want my app to register itself with local-tld!
+## I want my app to register itself with ports!
 
     var ports = require("ports");
     ports.getPort("yourfancyproject");
