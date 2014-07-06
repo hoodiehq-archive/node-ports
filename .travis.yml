@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.10'
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: stephan@boennemann.me
+  api_key:
+    secure: KSaEGLvLsQXhrr30K95LIVyTSoxpJ9gpIpq8xRcR+HJhRN8wYUi2hl5zsMS4IgDm1P3/n7dcF4yGUTH3M6SHP4YLpsc8W80sThwFLnawH8NvItd7Uqvfemzx+zw8kOT1t18ASxStn7lDpjlAclvW6ryty2iy7hns8fuhW1mOKlU=
+  on:
+    tags: true
+    repo: hoodiehq/node-ports

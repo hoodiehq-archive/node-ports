@@ -1,4 +1,5 @@
 # Ports registry
+[![Build Status](https://travis-ci.org/hoodiehq/node-ports.svg)](https://travis-ci.org/hoodiehq/node-ports)
 
 Manage a registry of unique port assignments for
 an operating system. Store user-defined meta-data
