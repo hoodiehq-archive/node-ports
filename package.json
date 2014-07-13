@@ -17,6 +17,8 @@
   ],
   "author": "Jan Lehnardt <jan@apache.org>",
   "license": "Apache 2.0",
-  "readmeFilename": "README.md",
-  "gitHead": "6b9c4504372b12f4ebaaa23fe88260dd49b54a5b"
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-release-hoodie": "^1.3.0"
+  }
 }
