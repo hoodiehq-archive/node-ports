@@ -90,5 +90,9 @@ function tmp() {
   if(process.platform == "win32") {
     return process.env["TMP"];
   }
+
+  if(process.env["CI"] == true) {
+    return process.env["PWD"]
+  }
   return process.env["TMPDIR"];
 }
