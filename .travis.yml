@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-- '0.10'
+  - '0.10'
+after_success:
+  - grunt ghrelease
 notifications:
   email: false
 deploy:
@@ -11,3 +13,6 @@ deploy:
   on:
     tags: true
     repo: hoodiehq/node-ports
+env:
+  global:
+    - secure: "g/9J7ejmw1e0BUMOtqTQfdPl9gQnratIlL4whQJkFW0Yx8HLyduP8qxrvgFkCj0JA+kQyhz+fmC85W3/v/BBLJWXQNwuUDnnuYAnYBpa8TRIp9SgYjUFLGjL3AbY9K0MeWCmuX5U2bAcy9Ic8fX6QsCVehqn8k6wdKYBFuRkjqg="
