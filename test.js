@@ -91,8 +91,9 @@ function tmp() {
     return process.env["TMP"];
   }
 
-  if(process.env["CI"] == true) {
+  if(process.env["CI"]) {
     return process.env["PWD"]
   }
+
   return process.env["TMPDIR"];
 }
