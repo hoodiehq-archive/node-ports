@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 before_install:
-  - npm install -g grunt
+- npm install -g grunt
 after_success:
-  - grunt ghrelease
+- grunt ghrelease
 notifications:
   email: false
 deploy:
@@ -13,8 +13,8 @@ deploy:
   api_key:
     secure: KSaEGLvLsQXhrr30K95LIVyTSoxpJ9gpIpq8xRcR+HJhRN8wYUi2hl5zsMS4IgDm1P3/n7dcF4yGUTH3M6SHP4YLpsc8W80sThwFLnawH8NvItd7Uqvfemzx+zw8kOT1t18ASxStn7lDpjlAclvW6ryty2iy7hns8fuhW1mOKlU=
   on:
+    all_branches: true
     tags: true
-    repo: hoodiehq/node-ports
 env:
   global:
     - secure: "g/9J7ejmw1e0BUMOtqTQfdPl9gQnratIlL4whQJkFW0Yx8HLyduP8qxrvgFkCj0JA+kQyhz+fmC85W3/v/BBLJWXQNwuUDnnuYAnYBpa8TRIp9SgYjUFLGjL3AbY9K0MeWCmuX5U2bAcy9Ic8fX6QsCVehqn8k6wdKYBFuRkjqg="
