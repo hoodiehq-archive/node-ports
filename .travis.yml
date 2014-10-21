@@ -5,6 +5,8 @@ before_install:
 - npm install -g grunt-cli
 notifications:
   email: false
+  slack:
+    secure: I1BuquShDtNXhCO05mSCFvXIJQ3zC8MfXCnDIlDYtaX0ZHW3FyE5anf1rvAtldibYKJBvkelPUJRxzAhUP/qTnC91EHch4XkKzk6T2emvqdV1wQ3dj1SC+xLBW4ZnL9iSRpixNaES0j+uDZwMs2rPjHvbiRp9guVRtjzTy/7+BQ=
 deploy:
   provider: npm
   email: stephan@thehoodiefirm.com
