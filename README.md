@@ -9,7 +9,7 @@ with each port.
 
 The registry lives in ~/.ports.json
 
-Export an environment variable to overide the location for the registry:
+Export an environment variable to override the location for the registry:
 
 ```
 export PORTSHOME=/some/valid/directory
