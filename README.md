@@ -7,7 +7,10 @@ Manage a registry of unique port assignments for
 an operating system. Store user-defined meta-data
 with each port.
 
-The registry lives in ~/.ports
+The registry lives in ~/.ports.json
+
+Export an environment variable to overide the location for the registry:
+    export PORTSHOME=/some/valid/directory
 
 Note that this module currently doesn’t check whether
 a port is actually available. That’s TBD.

@@ -55,9 +55,13 @@ var write_json = function write_json(filename, value) {
 };
 
 function getPortsFile() {
-  var homedir = "HOME";
-  if(process.platform === "win32") {
-    homedir = "USERPROFILE";
+  if (process.env.PORTSHOME !== undefined) {
+      var homedir = "PORTSHOME";
+  } else {
+      var homedir = "HOME";
+      if(process.platform === "win32") {
+        homedir = "USERPROFILE";
+      }
   }
   return path.join(process.env[homedir],".ports.json");
 };
